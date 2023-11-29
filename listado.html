@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=ç, initial-scale=1.0">
-    <title>listado de productos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Listado de productos</title>
 </head>
+
 <body>
+    <main class="container">
 
-    <div>
-        <h1>Listado de productos</h1>
 
-        <table>
-            <tr>
-                <td>Nombre</td>
-                <td>Precio</td>
-                <td>Stock</td>
-            </tr>
-            <tr>
-                <td>Producto 1</td>
-                <td>100</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>Producto 2</td>
-                <td>200</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>Producto 3</td>
-                <td>300</td>
-                <td>30</td>
-            </tr>
-        </table>
-    </div>
+        <div>
+            <a href="index.html" role="button">Volver al menu</a>
+        </div>
 
-    
+        <br />
+
+        <div>
+            <h1>Listado de productos</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col" colspan="2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productos">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Producto 1</td>
+                        <td>100</td>
+                        <td>10</td>
+                        <td>
+                            <button class="secondary">Editar</button>
+                            <button class="error">Eliminar</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="./js/listado.js"></script>
 </body>
+
 </html>
