@@ -19,7 +19,7 @@
         <div>
             <h1>Alta de productos</h1>
 
-            <form id="formulario" method="post">
+            <form id="formulario" method="post" enctype="multipart/form-data">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" required>
 
@@ -28,6 +28,9 @@
 
                 <label for="stock">Stock</label>
                 <input type="number" name="stock" id="stock" value="0">
+
+                <label for="imagen">Imagen Producto</label>
+                <input type="file" name="imagen" id="imagen">
 
                 <button type="submit">Enviar</button>
                 <button type="reset" class="secondary">Limpiar</button>

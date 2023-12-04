@@ -7,6 +7,8 @@ documento.addEventListener('submit', e => {
 
     const formData = new FormData(documento); // Obtener los datos del formulario
 
+    formData.append('imagen', documento.imagen.files[0]); // Agregar la imagen al formulario
+
     fetch(URL + '/productos', { // Enviar los datos al servidor
         method: 'POST', // Metodo de envio
         body: formData // Los datos del formulario

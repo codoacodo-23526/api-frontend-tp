@@ -9,10 +9,10 @@ fetch(URL + '/productos/' + id) // Obtener el producto
 .then(res => res.json()) // Convertir la respuesta a JSON
 .then(data => { // Mostrar los datos en consola
     console.log(data);
-    document.getElementById('codigo').value = data[0];
-    document.getElementById('nombre').value = data[1];
-    document.getElementById('precio').value = data[2];
-    document.getElementById('stock').value = data[3];
+    document.getElementById('codigo').value = data.id;
+    document.getElementById('nombre').value = data.nombre;
+    document.getElementById('precio').value = data.precio;
+    document.getElementById('stock').value = data.stock;
 });
 
 const documento = document.getElementById('formulario');

@@ -6,16 +6,27 @@ fetch(URL + '/productos') // Obtener los productos
     .then(res => res.json()) // Convertir la respuesta a JSON
     .then(data => { // Mostrar los datos en consola
        let html = ''; // Variable para guardar el HTML
+console.log(data);
 
        data.forEach(element => {
+
         //Bucktick `` para concatenar , interpolacion de variables ${}
+        if (element.imagen_url == null) {
+            imagen = '';
+        }
+        else
+        {
+            imagen =`<img src="../static/imagenes/${element.imagen_url}" width="100"></img>` 
+        }
+
         html = html + `<tr>
-            <td>${element[0]}</td>
-            <td>${element[1]}</td>
-            <td>${element[2]}</td>
-            <td>${element[3]}</td>
-            <td><a href="modificar.html?codigo=${element[0]}">Modificar</a></td>
-            <td><button class="alert" onclick="eliminar(${element[0]});">Eliminar</button></td>
+            <td>${element.id}</td>
+            <td>${element.nombre}</td>
+            <td>${element.precio}</td>
+            <td>${element.stock}</td>
+            <td>${imagen}</td>
+            <td><a href="modificar.html?codigo=${element.id}">Modificar</a></td>
+            <td><button class="alert" onclick="eliminar(${element.id});">Eliminar</button></td>
         </tr>`;
        });
 
